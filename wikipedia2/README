@@ -1,0 +1,11 @@
+JOSM Wikipedia Plugin 
+=====================
+
+This plugin simplifies linking OSM objects to Wikipedia articles.
+V2 adds the possibility to visualize articles as well as Wikimedia Commons
+photos on the map.
+
+Authors: Simon Legner (simon04), Augustin Roche (Aroche)
+
+License: GPL v2 (as JOSM)
+

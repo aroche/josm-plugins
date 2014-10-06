@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="wikipedia2" default="dist" basedir=".">
+
+    <!-- enter the SVN commit message -->
+    <property name="commit.message" value="Commit message"/>
+    <!-- enter the *lowest* JOSM version this plugin is currently compatible with -->
+    <property name="plugin.main.version" value="7521"/>
+
+    <property name="plugin.author" value="simon04, Aroche"/>
+    <property name="plugin.class" value="org.wikipedia2.WikipediaPlugin"/>
+    <property name="plugin.description" value="Simplifies linking OSM objects to Wikipedia articles"/>
+    <property name="plugin.icon" value="images/dialogs/wikipedia.png"/>
+    <property name="plugin.link" value="http://josm.openstreetmap.de/wiki/Help/Plugin/Wikipedia"/>
+
+    <!-- ** include targets that all plugins have in common ** -->
+    <import file="../build-common.xml"/>
+
+</project>
