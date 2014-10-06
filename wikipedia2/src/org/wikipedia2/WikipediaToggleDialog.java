@@ -70,7 +70,7 @@ public class WikipediaToggleDialog extends ToggleDialog implements MapView.EditL
         super(tr("Wikipedia"), "wikipedia", tr("Fetch Wikipedia articles with coordinates"), null, 150);
         createLayout(list, true, Arrays.asList(
                 new SideButton(new WikipediaLoadCoordinatesAction()),
-                //new SideButton(new WikipediaLoadCategoryAction()),
+                new SideButton(new WikipediaLoadCategoryAction()),
                 new SideButton(new PasteWikipediaArticlesAction()),
                 new SideButton(new AddWikipediaTagAction()),
                 new SideButton(new OpenWikipediaArticleAction()),
@@ -107,7 +107,6 @@ public class WikipediaToggleDialog extends ToggleDialog implements MapView.EditL
                 
                 if (uri.contains("edia.org")) {
                     System.out.println(url.toString());
-                    //String title = wpt.getString("text");
                     String title = wpt.getString(GpxConstants.GPX_NAME);
                     return new WikipediaMarker(wpt.getCoor(), url, title, parentLayer);
                 } else {
@@ -333,8 +332,6 @@ public class WikipediaToggleDialog extends ToggleDialog implements MapView.EditL
         }
     }
     
-    // TODO : create a proper settings dialog to check if commons pictures must
-    // be retrieved.
 
     class AddWikipediaTagAction extends AbstractAction {
 
@@ -401,7 +398,6 @@ public class WikipediaToggleDialog extends ToggleDialog implements MapView.EditL
     
     // layer part
     private void updateLayer() {
-        // System.out.println(layer);
         if (entries.size() > 0) {
             if (layer == null) {
                 layer = new WikipediaLayer(entries); 
